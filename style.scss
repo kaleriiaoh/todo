@@ -1,0 +1,384 @@
+$mediaWidthMobileSmall: 320px;
+$mediaWidthMobile: 767px;
+$mediaWidthTablet: 991px;
+$mediaWidthTabletLarge: 1024px;
+$mediaWidthTabletHorizontal: 1024px;
+$mediaWidthLaptop: 1024px;
+@mixin media-tablet {
+    @media (max-width: $mediaWidthTablet) {
+        @content;
+    }
+}
+
+@mixin media-tablet-horizontal {
+    @media (max-height: $mediaWidthTabletHorizontal) {
+        @content;
+    }
+}
+
+@mixin media-tablet-large {
+    @media (max-width: $mediaWidthTabletLarge) {
+        @content;
+    }
+}
+
+@mixin media-laptop {
+    @media (max-width: $mediaWidthLaptop) {
+        @content;
+    }
+}
+
+@mixin media-mobile {
+    @media (max-width: $mediaWidthMobile) {
+        @content;
+    }
+}
+
+@mixin media-mobile-small {
+    @media (max-width: $mediaWidthMobileSmall) {
+        @content;
+    }
+}
+
+* {
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 15px;
+    transition: all 0.3s;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.main-wrapp {
+    display: flex;
+    justify-content: center;
+    background-color: khaki;
+    min-height: 100vh;
+
+    @include media-tablet {
+        padding: 10px;
+    }
+
+    ul {
+        padding: 0;
+    }
+
+    input {
+        border: 1px solid transparent;
+        padding: 10px;
+        transition: all 0.3s;
+    }
+
+    label {
+        color: currentcolor;
+        border: solid 1px lightblue;
+        padding: 10px;
+        width: 76%;
+        background: lightblue;
+
+        @include media-tablet {
+            width: 75%;
+        }
+        @include media-mobile {
+            width: 70%;
+        }
+    }
+
+    textarea {
+        resize: none;
+        border: none;
+        outline: none;
+
+        &::-webkit-scrollbar {
+            width: 3px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: lightseagreen;
+        }
+       
+    }
+
+    img {
+        width: 100%;
+    }
+
+    input:focus {
+        outline: none;
+        background-color: white;
+        border: 1px solid teal;
+    }
+
+    .edit-item {
+        background-image: url('./img/edit-icon.png');
+        width: 30px;
+        height: 30px;
+        background-color: transparent;
+        background-position: center;
+        background-size: cover;
+        border: none;
+        cursor: pointer;
+        transition: all 0.3s;
+
+        @include media-tablet {
+            height: 25px;
+            width: 25px;
+        }
+
+        &:hover {
+            background-color: rgba(0, 139, 139, 0.1);
+            border-radius: 3px;
+        }
+    }
+
+    .remove-item {
+        background-image: url('./img/remove-icon.png');
+        width: 30px;
+        height: 30px;
+        background-color: transparent;
+        background-position: center;
+        background-size: cover;
+        border: none;
+        cursor: pointer;
+        transition: all 0.3s;
+
+        @include media-tablet {
+            height: 25px;
+            width: 25px;
+        }
+
+        &:hover {
+            background-color: rgba(0, 139, 139, 0.1);
+            border-radius: 3px;
+        }
+    }
+
+    .app-wrapp {
+        width: 100%;
+        max-width: 700px;
+        background-color: antiquewhite;
+        padding: 15px;
+
+        .item-text {
+            font-size: 16px;
+            line-height: 1.5;
+            border: 1px solid black;
+            display: block;
+            height: 40px;
+            padding: 15px;
+
+        }
+    }
+
+    .logo-wrapp {
+        padding: 15px;
+        max-width: 150px;
+
+        @include media-mobile {
+            max-width: 100px;
+            padding: 0;
+        }
+    }
+
+    .app-content {
+        padding: 15px;
+
+        @include media-mobile {
+            padding: 15px 0;
+        }
+
+        .add-items-wrapp {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+            margin-bottom: 10px;
+
+            @include media-mobile {
+                flex-direction: column;
+                align-items: center;
+            }
+    
+            input[type=text] {
+                width: 85%;
+                font-size: 16px;
+                line-height: 1.5;
+                border: 1px solid transparent;
+
+                @include media-mobile {
+                    margin-bottom: 10px;
+                    width: 100%;
+                }
+            }
+    
+            .button-add {
+                display: block;
+                border: none;
+                background: lightseagreen;
+                color: white;
+                cursor: pointer;
+                transition: all 0.3s;
+                margin-left: 15px;
+                font-size: 11px;
+                min-height: 40px;
+                padding: 15px;
+
+                @include media-mobile {
+                    margin-left: 0;
+                    width: 100%;
+                }
+            }
+
+            .button-add:hover {
+                background-color: teal;
+            }
+        }
+
+        .add-item-wrapp {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            position: relative;
+    
+            input {
+                width: 85%;
+                font-size: 16px;
+                line-height: 1.5;
+            }
+        }
+        
+        .items-todo {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+        }
+
+        .item-todo-wrapp {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 100%;
+        
+            .item-text {
+                width: 80%;
+            }
+        }
+
+        .show-edit {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: antiquewhite;
+            transition: all 0.3s;
+
+            .edit-todo {
+                padding: 10px;
+                font-size: 15px;
+                line-height: 1.5;
+                width: 76%;
+                height: 100%;
+                background-color: aliceblue;
+
+                @include media-tablet {
+                   width: 70%;
+                }
+            }
+
+            .waiting-todo {
+                background-image: url('./img/cat.gif');
+                width: 30px;
+                height: 30px;
+                background-color: transparent;
+                background-position: center;
+                background-size: cover;
+                cursor: pointer;
+
+                @include media-tablet {
+                    height: 25px;
+                    width: 25px;
+                }
+            }
+
+            .edit-save {
+                background-image: url('./img/check-mark.png');
+                width: 30px;
+                height: 30px;
+                background-color: transparent;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain;
+                cursor: pointer;
+                transition: all 0.3s;
+
+                @include media-tablet {
+                    height: 25px;
+                    width: 25px;
+                }
+
+                &:hover {
+                    background-color: rgba(0, 139, 139, 0.1);
+                    border-radius: 3px;
+                }
+            }
+
+            .edit-close {
+                background-image: url('./img/cancel.png');
+                width: 30px;
+                height: 30px;
+                background-color: transparent;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain;
+                cursor: pointer;
+                transition: all 0.3s;
+
+                @include media-tablet {
+                    height: 25px;
+                    width: 25px;
+                }
+
+                &:hover {
+                    background-color: rgba(0, 139, 139, 0.1);
+                    border-radius: 3px;
+                }
+            }
+        }
+
+        
+        input[type=checkbox]:checked~label {
+            background-color: thistle;
+            text-decoration: line-through;
+            border: 1px solid transparent;
+        }
+
+        input[type=checkbox] {
+            height: 25px;
+            width: 25px;
+            display: block;
+
+            @include media-mobile {
+                height: 20px;
+                width: 20px;
+                margin-right: 5px;
+            }
+        }
+
+
+        .emptyList {
+        background-image: url('./img/empty.png');
+        width: 250px;
+        height: 250px;
+        background-color: transparent;
+        background-position: center;
+        background-size: cover;
+        margin: auto;
+
+        }
+    }
+}

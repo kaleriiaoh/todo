@@ -1,0 +1,7 @@
+{
+    "liveSassCompile.settings.excludeList": [
+    "#/definitions/common/properties/debugServer"
+        "**/node_modules/**",
+        ".vscode/**"
+    ]
+}

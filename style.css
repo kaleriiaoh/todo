@@ -1,0 +1,369 @@
+* {
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-size: 15px;
+  transition: all 0.3s;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.main-wrapp {
+  display: flex;
+  justify-content: center;
+  background-color: khaki;
+  min-height: 100vh;
+}
+
+@media (max-width: 991px) {
+  .main-wrapp {
+    padding: 10px;
+  }
+}
+
+.main-wrapp ul {
+  padding: 0;
+}
+
+.main-wrapp input {
+  border: 1px solid transparent;
+  padding: 10px;
+  transition: all 0.3s;
+}
+
+.main-wrapp label {
+  color: currentcolor;
+  border: solid 1px lightblue;
+  padding: 10px;
+  width: 76%;
+  background: lightblue;
+}
+
+@media (max-width: 991px) {
+  .main-wrapp label {
+    width: 75%;
+  }
+}
+
+@media (max-width: 767px) {
+  .main-wrapp label {
+    width: 70%;
+  }
+}
+
+.main-wrapp textarea {
+  resize: none;
+  border: none;
+  outline: none;
+}
+
+.main-wrapp textarea::-webkit-scrollbar {
+  width: 3px;
+}
+
+.main-wrapp textarea::-webkit-scrollbar-thumb {
+  background-color: lightseagreen;
+}
+
+.main-wrapp img {
+  width: 100%;
+}
+
+.main-wrapp input:focus {
+  outline: none;
+  background-color: white;
+  border: 1px solid teal;
+}
+
+.main-wrapp .edit-item {
+  background-image: url("./img/edit-icon.png");
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  background-position: center;
+  background-size: cover;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+@media (max-width: 991px) {
+  .main-wrapp .edit-item {
+    height: 25px;
+    width: 25px;
+  }
+}
+
+.main-wrapp .edit-item:hover {
+  background-color: rgba(0, 139, 139, 0.1);
+  border-radius: 3px;
+}
+
+.main-wrapp .remove-item {
+  background-image: url("./img/remove-icon.png");
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  background-position: center;
+  background-size: cover;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+@media (max-width: 991px) {
+  .main-wrapp .remove-item {
+    height: 25px;
+    width: 25px;
+  }
+}
+
+.main-wrapp .remove-item:hover {
+  background-color: rgba(0, 139, 139, 0.1);
+  border-radius: 3px;
+}
+
+.main-wrapp .app-wrapp {
+  width: 100%;
+  max-width: 700px;
+  background-color: antiquewhite;
+  padding: 15px;
+}
+
+.main-wrapp .app-wrapp .item-text {
+  font-size: 16px;
+  line-height: 1.5;
+  border: 1px solid black;
+  display: block;
+  height: 40px;
+  padding: 15px;
+}
+
+.main-wrapp .logo-wrapp {
+  padding: 15px;
+  max-width: 150px;
+}
+
+@media (max-width: 767px) {
+  .main-wrapp .logo-wrapp {
+    max-width: 100px;
+    padding: 0;
+  }
+}
+
+.main-wrapp .app-content {
+  padding: 15px;
+}
+
+@media (max-width: 767px) {
+  .main-wrapp .app-content {
+    padding: 15px 0;
+  }
+}
+
+.main-wrapp .app-content .add-items-wrapp {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 767px) {
+  .main-wrapp .app-content .add-items-wrapp {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.main-wrapp .app-content .add-items-wrapp input[type=text] {
+  width: 85%;
+  font-size: 16px;
+  line-height: 1.5;
+  border: 1px solid transparent;
+}
+
+@media (max-width: 767px) {
+  .main-wrapp .app-content .add-items-wrapp input[type=text] {
+    margin-bottom: 10px;
+    width: 100%;
+  }
+}
+
+.main-wrapp .app-content .add-items-wrapp .button-add {
+  display: block;
+  border: none;
+  background: lightseagreen;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-left: 15px;
+  font-size: 11px;
+  min-height: 40px;
+  padding: 15px;
+}
+
+@media (max-width: 767px) {
+  .main-wrapp .app-content .add-items-wrapp .button-add {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+.main-wrapp .app-content .add-items-wrapp .button-add:hover {
+  background-color: teal;
+}
+
+.main-wrapp .app-content .add-item-wrapp {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.main-wrapp .app-content .add-item-wrapp input {
+  width: 85%;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.main-wrapp .app-content .items-todo {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.main-wrapp .app-content .item-todo-wrapp {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 100%;
+}
+
+.main-wrapp .app-content .item-todo-wrapp .item-text {
+  width: 80%;
+}
+
+.main-wrapp .app-content .show-edit {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: antiquewhite;
+  transition: all 0.3s;
+}
+
+.main-wrapp .app-content .show-edit .edit-todo {
+  padding: 10px;
+  font-size: 15px;
+  line-height: 1.5;
+  width: 76%;
+  height: 100%;
+  background-color: aliceblue;
+}
+
+@media (max-width: 991px) {
+  .main-wrapp .app-content .show-edit .edit-todo {
+    width: 70%;
+  }
+}
+
+.main-wrapp .app-content .show-edit .waiting-todo {
+  background-image: url("./img/cat.gif");
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+}
+
+@media (max-width: 991px) {
+  .main-wrapp .app-content .show-edit .waiting-todo {
+    height: 25px;
+    width: 25px;
+  }
+}
+
+.main-wrapp .app-content .show-edit .edit-save {
+  background-image: url("./img/check-mark.png");
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+@media (max-width: 991px) {
+  .main-wrapp .app-content .show-edit .edit-save {
+    height: 25px;
+    width: 25px;
+  }
+}
+
+.main-wrapp .app-content .show-edit .edit-save:hover {
+  background-color: rgba(0, 139, 139, 0.1);
+  border-radius: 3px;
+}
+
+.main-wrapp .app-content .show-edit .edit-close {
+  background-image: url("./img/cancel.png");
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+@media (max-width: 991px) {
+  .main-wrapp .app-content .show-edit .edit-close {
+    height: 25px;
+    width: 25px;
+  }
+}
+
+.main-wrapp .app-content .show-edit .edit-close:hover {
+  background-color: rgba(0, 139, 139, 0.1);
+  border-radius: 3px;
+}
+
+.main-wrapp .app-content input[type=checkbox]:checked ~ label {
+  background-color: thistle;
+  text-decoration: line-through;
+  border: 1px solid transparent;
+}
+
+.main-wrapp .app-content input[type=checkbox] {
+  height: 25px;
+  width: 25px;
+  display: block;
+}
+
+@media (max-width: 767px) {
+  .main-wrapp .app-content input[type=checkbox] {
+    height: 20px;
+    width: 20px;
+    margin-right: 5px;
+  }
+}
+
+.main-wrapp .app-content .emptyList {
+  background-image: url("./img/empty.png");
+  width: 250px;
+  height: 250px;
+  background-color: transparent;
+  background-position: center;
+  background-size: cover;
+  margin: auto;
+}
+/*# sourceMappingURL=style.css.map */
